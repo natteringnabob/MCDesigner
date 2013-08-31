@@ -1,8 +1,10 @@
 ﻿<Window x:Class="MCDesigner.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="642" Width="592">
+    <Grid Height="598" Width="566">
+        <Button Content="Get File" Height="23" HorizontalAlignment="Left" Margin="45,73,0,0" Name="btnGetFile" VerticalAlignment="Top" Width="75" Click="btnGetFile_Click" />
+        <TextBox ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="122" HorizontalAlignment="Left" Margin="185,22,0,0" Name="fileContents" Text="" VerticalAlignment="Top" Width="289" />
+        <Rectangle Height="397" HorizontalAlignment="Left" Margin="31,166,0,0" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" Width="487" />
     </Grid>
 </Window>

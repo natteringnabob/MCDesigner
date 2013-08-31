@@ -8,7 +8,13 @@ using log4net.Config;
 
 namespace ChartReader
 {
-    public class Reader
+
+    public interface IReader
+    {
+        IEnumerable<string> ReadLines(string fileLocation);
+    }
+
+    public class Reader: IReader
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Reader));
 
@@ -18,9 +24,9 @@ namespace ChartReader
 
             try
             {
-                using (StreamReader sr = new StreamReader(fileLocation))
+                using (var sr = new StreamReader(fileLocation))
                 {
-                    var line = string.Empty;
+                    string line;
                     while ((line = sr.ReadLine()) != null)
                     {
                         lines.Add(line);
