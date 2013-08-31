@@ -7,18 +7,35 @@ namespace ChartReader
 {
     public class LyricLine
     {
-        private IEnumerable<string> Words { get; set; }
-        private IEnumerable<string> Chords { get; set; }
+        public IEnumerable<Lyric> Lyrics { get; set; }
+        public bool HasChords { get; set; }
 
         public LyricLine()
         {
             
         }
 
-        public LyricLine(IEnumerable<string> words, IEnumerable<string> chords)
+        public LyricLine(IEnumerable<Lyric> lyrics,  bool hasChords)
         {
-            Words = words;
-            Chords = chords;
+            Lyrics = lyrics;
+            HasChords = hasChords;
+        }
+    }
+
+    public class Lyric
+    {
+        public string Text { get; set; }
+        public string Chord { get; set; }
+
+        public Lyric()
+        {
+            
+        }
+
+        public Lyric(string chord, string text)
+        {
+            Text = text;
+            Chord = chord;
         }
     }
 }

@@ -5,6 +5,7 @@
     <Grid Height="598" Width="566">
         <Button Content="Get File" Height="23" HorizontalAlignment="Left" Margin="45,73,0,0" Name="btnGetFile" VerticalAlignment="Top" Width="75" Click="btnGetFile_Click" />
         <TextBox ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="122" HorizontalAlignment="Left" Margin="185,22,0,0" Name="fileContents" Text="" VerticalAlignment="Top" Width="289" />
-        <Rectangle Height="397" HorizontalAlignment="Left" Margin="31,166,0,0" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" Width="487" />
+        <Button Content="Display Grid" Height="23" HorizontalAlignment="Left" Margin="31,137,0,0" Name="btnGridDsp" VerticalAlignment="Top" Width="75" Click="btnGridDsp_Click" />
+        <Grid Height="auto" HorizontalAlignment="Left" Margin="45,192,0,0" Name="grid1" VerticalAlignment="Top" Width="200" />
     </Grid>
 </Window>

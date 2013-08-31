@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
@@ -21,6 +22,17 @@ namespace ChartReader
         public static IEnumerable<string> LineToStringEnumerable(this string line)
         {
             return line.Split(' ');
+        }
+
+        public static ObservableCollection<string> LineToStringObservable(this string line)
+        {
+            var array =  line.Split(' ');
+            var obs = new ObservableCollection<string>();
+            foreach (var word in array)
+            {
+                obs.Add(word);
+            }
+            return obs;
         }
     }
 }
